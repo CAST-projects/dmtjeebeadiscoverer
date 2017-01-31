@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Projects packageId="5d194aa9-e5cd-4bd1-a9b2-0507b7d3fd3b" packageName="My Package" packageType="FileSourceCodeRepository" packageConnectionPath="D:/SRC/ATT/Folders/GCP/DMT/Analyzed/GCP_EAN/Weblayer/gcp_nxweb/nxweb">
+ <PackageRootPath path=""/>
+ <Project projectId="nxweb.work_NetworxDTL" projectName="NetworxDTL" projectType="dmtdevjeetechno.J2EEProject" projectResourceId="nxweb.work_NetworxDTL" projectPath="." projectOrigin="Bea Java project" selectionStatus="Selected">
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@NetworxDTL" value="."/>
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxDTL" value="."/>
+  <Metadata name="beaType" value="urn:com-bea-ide:project.type:Java"/>
+  <Languages>
+   <Language languageId="1" languageName="JavaLanguage" sourceFilesPattern="*.java;*.sqlj" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.jar" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="2" resourceTypeName="XMLLanguage" resourceFilesPattern="*.xml" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="3" resourceTypeName="JavaPropertiesLanguage" resourceFilesPattern="*.properties" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="2" languageName="JavaWebServerLanguage" sourceFilesPattern="*.jsp" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaWebContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.ear;*.war" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="3" languageName="JavaWebClientLanguage" sourceFilesPattern="*.htm;*.html;*.htc;*.js;*.vbs" sourceFilesCollation="WindowsNTFS">
+   </Language>
+  </Languages>
+  <Sources>
+   <SourceDirectory sourceDirectoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxDTL%/NetworxDTL" languageId="1" sourceDirectorySize="0">
+   </SourceDirectory>
+  </Sources>
+  <Resources>
+   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxDTL%/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   </DirectoryReference>
+   <ProjectReference projectRef="nxweb.work_Utilities" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+   <ProjectReference projectRef="nxweb.work_NetworxWebClient" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+   <ProjectReference projectRef="nxweb.work_NetworxWebServer" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+  </Resources>
+ </Project>
+ <Project projectId="nxweb.work_Schemas" projectName="Schemas" projectType="dmtdevjeetechno.J2EEProject" projectResourceId="nxweb.work_Schemas" projectPath="." projectOrigin="Bea Java project" selectionStatus="Selected">
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@Schemas" value="."/>
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@nxweb.work_Schemas" value="."/>
+  <Metadata name="beaType" value="urn:com-bea-ide:project.type:Schema"/>
+  <Languages>
+   <Language languageId="1" languageName="JavaLanguage" sourceFilesPattern="*.java;*.sqlj" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.jar" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="2" resourceTypeName="XMLLanguage" resourceFilesPattern="*.xml" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="3" resourceTypeName="JavaPropertiesLanguage" resourceFilesPattern="*.properties" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="2" languageName="JavaWebServerLanguage" sourceFilesPattern="*.jsp" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaWebContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.ear;*.war" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="3" languageName="JavaWebClientLanguage" sourceFilesPattern="*.htm;*.html;*.htc;*.js;*.vbs" sourceFilesCollation="WindowsNTFS">
+   </Language>
+  </Languages>
+  <Resources>
+   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_Schemas%/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   </DirectoryReference>
+  </Resources>
+ </Project>
+ <Project projectId="nxweb.work_NetworxWeb" projectName="NetworxWeb" projectType="dmtdevjeetechno.J2EEProject" projectResourceId="nxweb.work_NetworxWeb" projectPath="." projectOrigin="Bea Java project" selectionStatus="Selected">
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@NetworxWeb" value="."/>
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWeb" value="."/>
+  <Metadata name="beaType" value="urn:com-bea-ide:project.type:WebApp"/>
+  <Metadata name="applicationDescriptor" value="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWeb%/NetworxWeb/WEB-INF/web.xml"/>
+  <Metadata name="applicationRootPath" value="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWeb%/NetworxWeb"/>
+  <Languages>
+   <Language languageId="1" languageName="JavaLanguage" sourceFilesPattern="*.java;*.sqlj" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.jar" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="2" resourceTypeName="XMLLanguage" resourceFilesPattern="*.xml" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="3" resourceTypeName="JavaPropertiesLanguage" resourceFilesPattern="*.properties" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="2" languageName="JavaWebServerLanguage" sourceFilesPattern="*.jsp" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaWebContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.ear;*.war" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="3" languageName="JavaWebClientLanguage" sourceFilesPattern="*.htm;*.html;*.htc;*.js;*.vbs" sourceFilesCollation="WindowsNTFS">
+   </Language>
+  </Languages>
+  <Sources>
+   <SourceDirectory sourceDirectoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWeb%/NetworxWeb" languageId="2" sourceDirectorySize="0">
+   </SourceDirectory>
+   <SourceDirectory sourceDirectoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWeb%/NetworxWeb" languageId="3" sourceDirectorySize="0">
+   </SourceDirectory>
+  </Sources>
+  <Resources>
+   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWeb%/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   </DirectoryReference>
+   <ProjectReference projectRef="nxweb.work_NetworxDTL" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+   <ProjectReference projectRef="nxweb.work_Utilities" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+   <ProjectReference projectRef="nxweb.work_NetworxWebClient" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+   <ProjectReference projectRef="nxweb.work_NetworxWebServer" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+  </Resources>
+ </Project>
+ <Project projectId="nxweb.work_Utilities" projectName="Utilities" projectType="dmtdevjeetechno.J2EEProject" projectResourceId="nxweb.work_Utilities" projectPath="." projectOrigin="Bea Java project" selectionStatus="Selected">
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@Utilities" value="."/>
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@nxweb.work_Utilities" value="."/>
+  <Metadata name="beaType" value="urn:com-bea-ide:project.type:Java"/>
+  <Languages>
+   <Language languageId="1" languageName="JavaLanguage" sourceFilesPattern="*.java;*.sqlj" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.jar" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="2" resourceTypeName="XMLLanguage" resourceFilesPattern="*.xml" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="3" resourceTypeName="JavaPropertiesLanguage" resourceFilesPattern="*.properties" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="2" languageName="JavaWebServerLanguage" sourceFilesPattern="*.jsp" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaWebContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.ear;*.war" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="3" languageName="JavaWebClientLanguage" sourceFilesPattern="*.htm;*.html;*.htc;*.js;*.vbs" sourceFilesCollation="WindowsNTFS">
+   </Language>
+  </Languages>
+  <Sources>
+   <SourceDirectory sourceDirectoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_Utilities%/Utilities" languageId="1" sourceDirectorySize="0">
+   </SourceDirectory>
+  </Sources>
+  <Resources>
+   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_Utilities%/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   </DirectoryReference>
+   <ProjectReference projectRef="nxweb.work_NetworxDTL" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+   <ProjectReference projectRef="nxweb.work_NetworxWebClient" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+   <ProjectReference projectRef="nxweb.work_NetworxWebServer" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+  </Resources>
+ </Project>
+ <Project projectId="nxweb.work_NetworxWebClient" projectName="NetworxWebClient" projectType="dmtdevjeetechno.J2EEProject" projectResourceId="nxweb.work_NetworxWebClient" projectPath="." projectOrigin="Bea Java project" selectionStatus="Selected">
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@NetworxWebClient" value="."/>
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWebClient" value="."/>
+  <Metadata name="beaType" value="urn:com-bea-ide:project.type:Java"/>
+  <Languages>
+   <Language languageId="1" languageName="JavaLanguage" sourceFilesPattern="*.java;*.sqlj" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.jar" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="2" resourceTypeName="XMLLanguage" resourceFilesPattern="*.xml" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="3" resourceTypeName="JavaPropertiesLanguage" resourceFilesPattern="*.properties" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="2" languageName="JavaWebServerLanguage" sourceFilesPattern="*.jsp" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaWebContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.ear;*.war" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="3" languageName="JavaWebClientLanguage" sourceFilesPattern="*.htm;*.html;*.htc;*.js;*.vbs" sourceFilesCollation="WindowsNTFS">
+   </Language>
+  </Languages>
+  <Sources>
+   <SourceDirectory sourceDirectoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWebClient%/NetworxWebClient" languageId="1" sourceDirectorySize="0">
+   </SourceDirectory>
+  </Sources>
+  <Resources>
+   <ContainerReference containerRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWebClient%/NetworxWeb/WEB-INF/client/desktopclient/nexaweb-desktop-client.jar" languageId="1" resourceTypeId="1" containerSize="0">
+   </ContainerReference>
+   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWebClient%/NetworxWebClient/util" languageId="1" resourceTypeId="1" directorySize="0">
+   </DirectoryReference>
+   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWebClient%/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   </DirectoryReference>
+   <ProjectReference projectRef="nxweb.work_NetworxDTL" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+   <ProjectReference projectRef="nxweb.work_Utilities" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+   <ProjectReference projectRef="nxweb.work_NetworxWebServer" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+  </Resources>
+ </Project>
+ <Project projectId="nxweb.work_NetworxWebServer" projectName="NetworxWebServer" projectType="dmtdevjeetechno.J2EEProject" projectResourceId="nxweb.work_NetworxWebServer" projectPath="." projectOrigin="Bea Java project" selectionStatus="Selected">
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@NetworxWebServer" value="."/>
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWebServer" value="."/>
+  <Metadata name="beaType" value="urn:com-bea-ide:project.type:Java"/>
+  <Languages>
+   <Language languageId="1" languageName="JavaLanguage" sourceFilesPattern="*.java;*.sqlj" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.jar" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="2" resourceTypeName="XMLLanguage" resourceFilesPattern="*.xml" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="3" resourceTypeName="JavaPropertiesLanguage" resourceFilesPattern="*.properties" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="2" languageName="JavaWebServerLanguage" sourceFilesPattern="*.jsp" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaWebContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.ear;*.war" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="3" languageName="JavaWebClientLanguage" sourceFilesPattern="*.htm;*.html;*.htc;*.js;*.vbs" sourceFilesCollation="WindowsNTFS">
+   </Language>
+  </Languages>
+  <Sources>
+   <SourceDirectory sourceDirectoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWebServer%/NetworxWebServer" languageId="1" sourceDirectorySize="0">
+   </SourceDirectory>
+  </Sources>
+  <Resources>
+   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWebServer%/NetworxWeb/WEB-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   </DirectoryReference>
+   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWebServer%/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   </DirectoryReference>
+   <ProjectReference projectRef="nxweb.work_NetworxDTL" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+   <ProjectReference projectRef="nxweb.work_Utilities" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+   <ProjectReference projectRef="nxweb.work_NetworxWebClient" languageId="0" resourceTypeId="0">
+   </ProjectReference>
+  </Resources>
+ </Project>
+</Projects>
