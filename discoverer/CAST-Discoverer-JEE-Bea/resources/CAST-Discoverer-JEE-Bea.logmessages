@@ -2,7 +2,7 @@
 <messages>
 	<language name="English">
 		<message id="cast.dmt.discover.jee.bea.startbuildProject" format="Start to build projects from %FILE%."/>
-		<message id="cast.dmt.discover.jee.bea.startbuildProject" format="End to build projects from %FILE%."/>
+		<message id="cast.dmt.discover.jee.bea.endbuildProject" format="End to build projects from %FILE%."/>
 		<message id="cast.dmt.discover.jee.bea.getJavaLanguageFailure" format="Internal error while getting the information from the plugin. The JavaLanguage was not found."/>
 		<message id="cast.dmt.discover.jee.bea.getJavaContainerLanguageFailure" format="Internal error while getting the information from the plugin. The JavaContainerLanguage was not found."/>
 	</language>

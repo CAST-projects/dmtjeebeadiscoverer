@@ -33,7 +33,7 @@ public class JeeBeaProjectsDiscovererUnitTest
         protected void configureTestdiscoverer(ProjectsDiscovererWrapper discovererWrapper)
         {
             ProfileOrProjectTypeConfiguration projectTypeConfiguration = discovererWrapper.addProjectTypeConfiguration(
-                "dmtdevjeetechno.J2EEProject", "project.xml", ReferenceCollation.WindowsNTFS, "genfiles.properties");
+                "dmtdevjeetechno.J2EEProject", "*.work", ReferenceCollation.WindowsNTFS, "genfiles.properties");
             LanguageConfiguration javaLanguage = projectTypeConfiguration.addLanguageConfiguration("JavaLanguage",
                 "*.java;*.sqlj", ReferenceCollation.WindowsNTFS);
             javaLanguage.addResourceTypeConfiguration("JavaContainerLanguage", null, ReferenceCollation.WindowsNTFS, "*.jar",
