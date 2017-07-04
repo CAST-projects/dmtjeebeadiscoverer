@@ -170,7 +170,7 @@ public class ProjectFileScanner
             }
             else if ("urn:com-bea-ide:project.type:Schema".equals(projectType))
             {
-                schemaProject = currentProject.getId();
+                setSchemaProject(currentProject.getId());
             }
         }
 
@@ -261,6 +261,15 @@ public class ProjectFileScanner
             }
 
         }
+
+		@SuppressWarnings("unused")
+		public String getSchemaProject() {
+			return schemaProject;
+		}
+
+		public void setSchemaProject(String schemaProject) {
+			this.schemaProject = schemaProject;
+		}
     }
 
     private static class BeaProjectReader extends AbstractXMLFileReader
@@ -328,7 +337,6 @@ public class ProjectFileScanner
                             {
                                 if ("class.path".equals(optionName))
                                 {
-                                    int i = 0;
                                     interpreter.addClasspath(attributes.getValue("value"));
                                 }
                                 else if ("source.path".equals(optionName))

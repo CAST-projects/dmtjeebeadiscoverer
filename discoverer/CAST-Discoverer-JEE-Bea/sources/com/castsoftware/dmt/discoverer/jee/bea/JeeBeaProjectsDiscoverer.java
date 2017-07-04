@@ -1,7 +1,5 @@
 package com.castsoftware.dmt.discoverer.jee.bea;
 
-import java.util.Set;
-
 import com.castsoftware.dmt.engine.discovery.BasicProjectsDiscovererAdapter;
 import com.castsoftware.dmt.engine.discovery.IProjectsDiscovererUtilities;
 import com.castsoftware.dmt.engine.project.IProfileReadOnly;
