@@ -1,0 +1,4 @@
+LPVERS=1.0.0
+EXT_NAME=JEE-BeaProjectDiscoverer
+DEPENDENCIES=dmtjeebeadiscoverer-1.0.0.dmtplugin
+PLUGIN_DELIVERY=dmtjeebeadiscoverer
