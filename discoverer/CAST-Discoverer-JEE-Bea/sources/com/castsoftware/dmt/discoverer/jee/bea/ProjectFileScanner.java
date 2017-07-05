@@ -41,12 +41,18 @@ public class ProjectFileScanner
         void addProject(String name);
 
         /**
+         * Reset the project
+         *
+         */
+        void resetProject();
+
+        /**
          * Interpret the type of the project
          *
          * @param type
          *            the type of the project
          */
-        void projectType(String type);
+        void setProjectType(String type);
 
         /**
          * Set the project path
@@ -86,30 +92,36 @@ public class ProjectFileScanner
     private static class ProjectRecorder implements IProjectInterpreter
     {
     	private final IProjectsDiscovererUtilities projectsDiscovererUtilities;
-        private Project currentProject;
         private final Project project;
-        private final Set<String> classpaths;
         private final int javaLanguageId;
         private final int javaContainerLanguageId;
         private final int  javaWebServerLanguage;
         private final int javaWebClientLanguage;
+
+        private Project currentProject;
+        private final Set<String> classpaths;
+        private final Set<String> sourcepaths;
         private String projectPath;
         private String projectType;
         private final Set<String> javaProjects;
-        private String webProject;
-        private String schemaProject;
+        private final Set<String> webProjects;
+        private final Set<String> ejbProjects;
 
         private ProjectRecorder(IProjectsDiscovererUtilities projectsDiscovererUtilities, Project project, int javaLanguageId, int javaContainerLanguageId, int javaWebServerLanguage, int javaWebClientLanguage)
         {
         	this.projectsDiscovererUtilities = projectsDiscovererUtilities;
-        	currentProject = null;
         	this.project = project;
             this.javaLanguageId = javaLanguageId;
             this.javaContainerLanguageId = javaContainerLanguageId;
             this.javaWebServerLanguage = javaWebServerLanguage;
             this.javaWebClientLanguage = javaWebClientLanguage;
-            classpaths = new HashSet<String>();
+
+        	currentProject = null;
+        	classpaths = new HashSet<String>();
+        	sourcepaths = new HashSet<String>();
             javaProjects = new HashSet<String>();
+            webProjects = new HashSet<String>();
+            ejbProjects = new HashSet<String>();
         }
 
         @Override
@@ -139,39 +151,91 @@ public class ProjectFileScanner
 		@Override
         public void addProject(String name)
         {
-			String id = project.getId().concat("_").concat(name);
-			String resourceId = project.getResourceId().concat("_").concat(name);
-			currentProject = projectsDiscovererUtilities.createInitialProject(id, name, project.getType(), resourceId, project.getPath());
-            return;
+			if (!"urn:com-bea-ide:project.type:Schema".equals(projectType))
+			{
+				String id = project.getId().concat("_").concat(name);
+				String resourceId = project.getResourceId().concat("_").concat(name);
+				currentProject = projectsDiscovererUtilities.createInitialProject(id, name, project.getType(), resourceId, projectPath);
+	            currentProject.addMetadata("beaType", projectType);
+			}
+			return;
 		}
 
+		@Override
+        public void resetProject()
+        {
+			//currentProject = null;
+            classpaths.clear();
+            sourcepaths.clear();
+            projectPath = null;
+            projectType = null;
+            return;
+		}
         @Override
         public void addProjectSourceFolders()
         {
             if ("urn:com-bea-ide:project.type:Java".equals(projectType))
             {
                 javaProjects.add(currentProject.getId());
-                String sourceFolder = projectPath;
-                if (sourceFolder.startsWith("./"))
-                    sourceFolder = buildPackageRelativePath(currentProject, sourceFolder.substring(2));
+                
+                //String projectFolder = projectPath;
+                //if (projectFolder.startsWith("./"))
+                //	projectFolder = buildPackageRelativePath(currentProject, projectFolder.substring(2));
 
-                currentProject.addSourceDirectoryReference(sourceFolder, javaLanguageId);
+                if (sourcepaths.size() == 0)
+                	//currentProject.addSourceDirectoryReference(projectFolder, javaLanguageId);
+                	currentProject.addSourceDirectoryReference(projectPath, javaLanguageId);
+                else
+                {
+                	for (String sourcepath : sourcepaths)
+                	{
+                		//String sourceFolder = projectFolder.concat("/").concat(sourcepath);
+                		String sourceFolder = projectPath.concat("/").concat(sourcepath);
+                		currentProject.addSourceDirectoryReference(sourceFolder, javaLanguageId);
+                	}
+                }
             }
             else if ("urn:com-bea-ide:project.type:WebApp".equals(projectType))
             {
-                webProject = currentProject.getId();
-                String sourceFolder = projectPath;
-                if (sourceFolder.startsWith("./"))
-                    sourceFolder = buildPackageRelativePath(currentProject, sourceFolder.substring(2));
-                currentProject.addMetadata(META_JSP_WEB_APPDESCRIPTOR, sourceFolder.concat("/WEB-INF/web.xml"));
-                currentProject.addMetadata(META_JSP_WEB_ROOT, sourceFolder);
-                currentProject.addSourceDirectoryReference(sourceFolder, javaWebServerLanguage);
-                currentProject.addSourceDirectoryReference(sourceFolder, javaWebClientLanguage);
+                webProjects.add(currentProject.getId());
+                //String sourceFolder = projectPath;
+                //if (sourceFolder.startsWith("./"))
+                //    sourceFolder = buildPackageRelativePath(currentProject, sourceFolder.substring(2));
+                //currentProject.addMetadata(META_JSP_WEB_APPDESCRIPTOR, sourceFolder.concat("/WEB-INF/web.xml"));
+                currentProject.addMetadata(META_JSP_WEB_APPDESCRIPTOR, projectPath.concat("/WEB-INF/web.xml"));
+                //currentProject.addMetadata(META_JSP_WEB_ROOT, sourceFolder);
+                currentProject.addMetadata(META_JSP_WEB_ROOT, projectPath);
+                //currentProject.addSourceDirectoryReference(sourceFolder, javaWebServerLanguage);
+                currentProject.addSourceDirectoryReference(projectPath, javaWebServerLanguage);
+                //currentProject.addSourceDirectoryReference(sourceFolder, javaWebClientLanguage);
+                currentProject.addSourceDirectoryReference(projectPath, javaWebClientLanguage);
             }
             else if ("urn:com-bea-ide:project.type:Schema".equals(projectType))
             {
-                setSchemaProject(currentProject.getId());
+            	// skip Schemas
             }
+            else if ("urn:com-bea-ide:project.type:EJB".equals(projectType))
+            {
+                ejbProjects.add(currentProject.getId());
+
+                //String projectFolder = projectPath;
+                //if (projectFolder.startsWith("./"))
+                //	projectFolder = buildPackageRelativePath(currentProject, projectFolder.substring(2));
+
+                if (sourcepaths.size() == 0)
+                	//currentProject.addSourceDirectoryReference(projectFolder, javaLanguageId);
+                	currentProject.addSourceDirectoryReference(projectPath, javaLanguageId);
+                else
+                {
+                	for (String sourcepath : sourcepaths)
+                	{
+                		//String sourceFolder = projectFolder.concat("/").concat(sourcepath);
+                		String sourceFolder = projectPath.concat("/").concat(sourcepath);
+                		currentProject.addSourceDirectoryReference(sourceFolder, javaLanguageId);
+                	}
+                }
+            }
+
         }
 
 		@Override
@@ -234,42 +298,49 @@ public class ProjectFileScanner
 		}
 
 		@Override
-		public void projectType(String type) {
+		public void setProjectType(String type) {
             projectType = type;
-            currentProject.addMetadata("beaType", type);
 		}
 
         @Override
         public void setProjectPath(String path)
         {
-            projectPath = path;
+            projectPath = project.getPath().concat(path.substring(1));
         }
 
         @Override
         public void addProjectDependencies()
         {
-            Project p = projectsDiscovererUtilities.getProject(webProject);
-            for (String id : javaProjects)
-            {
-                p.addProjectReference(id);
-                Project j = projectsDiscovererUtilities.getProject(id);
-                for (String dep : javaProjects)
-                {
-                    if (!dep.equals(id))
-                        j.addProjectReference(dep);
-                }
-            }
+        	for (String webProject : webProjects)
+        	{
+	            Project p = projectsDiscovererUtilities.getProject(webProject);
+	            for (String id : javaProjects)
+	            {
+	                p.addProjectReference(id);
+	                Project j = projectsDiscovererUtilities.getProject(id);
+	                for (String dep : javaProjects)
+	                {
+	                    if (!dep.equals(id))
+	                        j.addProjectReference(dep);
+	                }
+	            }
+        	}
 
+        	for (String ejbProject : ejbProjects)
+        	{
+	            Project p = projectsDiscovererUtilities.getProject(ejbProject);
+	            for (String id : javaProjects)
+	            {
+	                p.addProjectReference(id);
+	                Project j = projectsDiscovererUtilities.getProject(id);
+	                for (String dep : javaProjects)
+	                {
+	                    if (!dep.equals(id))
+	                        j.addProjectReference(dep);
+	                }
+	            }
+        	}
         }
-
-		@SuppressWarnings("unused")
-		public String getSchemaProject() {
-			return schemaProject;
-		}
-
-		public void setSchemaProject(String schemaProject) {
-			this.schemaProject = schemaProject;
-		}
     }
 
     private static class BeaProjectReader extends AbstractXMLFileReader
@@ -283,6 +354,8 @@ public class ProjectFileScanner
         private boolean isInProjects;
         private boolean isInProject;
         private int depth;
+        private String projectName;
+        private String projectType;
 
         private BeaProjectReader()
         {
@@ -329,7 +402,10 @@ public class ProjectFileScanner
                                 // interpreter.addSourceFolder(attributes.getValue("value"));
                                 interpreter.setProjectPath(attributes.getValue("value"));
                             else if ("type".equals(optionName))
-                                interpreter.projectType(attributes.getValue("value"));
+                            {
+                                projectType = attributes.getValue("value");
+                                interpreter.setProjectType(projectType);
+                            }
                         }
                         else if (isInComponents && isInComponent && depth == 5)
                         {
@@ -356,13 +432,22 @@ public class ProjectFileScanner
             		if (isInProjects)
             		{
             			isInProject = true;
-                        interpreter.addProject(attributes.getValue("name"));
+            			projectName = attributes.getValue("name");
             		}
             	}
                 else if ("components".equals(elementName))
                     isInComponents = true;
                 else if ("component".equals(elementName))
                 {
+                	// inside a project
+                	// the component is either empty
+                	// <component name="com.bea.ide.JavaCompiler" />
+                	//
+                	//
+                	// <component name="com.bea.ide.JavaCompiler">
+                	//   <option name="class.path" value="" />
+                	//   <option name="source.path" value="" />
+                	// </component>
                     isInComponent = true;
                     componentName = attributes.getValue("name");
                 }
@@ -381,8 +466,14 @@ public class ProjectFileScanner
                 if (isInProject)
                 {
             		isInProject = false;
-                    interpreter.addProjectSourceFolders();
-                    interpreter.addClasspaths();
+                    if (!"urn:com-bea-ide:project.type:Schema".equals(projectType))
+                    {
+                        interpreter.addProject(projectName);
+                        interpreter.addProjectSourceFolders();
+                        interpreter.addClasspaths();
+                    }
+                    interpreter.resetProject();
+                    projectName = null;
                 }
             }
             else if ("projects".equals(elementName))

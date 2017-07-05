@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Projects packageId="4a856397-e467-47d2-984b-4d4b4bbb9276" packageName="gcp" packageType="FileSourceCodeRepository" packageConnectionPath="D:/SRC/ATT/GCP/Weblayer_EIN/gcp_bvoip">
+ <PackageRootPath path=""/>
+ <Project projectId="dborbvoip/bvoipwci/bvoipwci.work_BVOIPGIOMCustomerInventory" projectName="BVOIPGIOMCustomerInventory" projectType="dmtdevjeetechno.J2EEProject" projectResourceId="dborbvoip/bvoipwci/bvoipwci.work_BVOIPGIOMCustomerInventory" projectPath="dborbvoip/bvoipwci/BVOIPGIOMCustomerInventory" projectOrigin="Bea Java project" selectionStatus="Selected">
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@BVOIPGIOMCustomerInventory" value="dborbvoip/bvoipwci/BVOIPGIOMCustomerInventory"/>
+  <Metadata name="#!$?BASE_DIRECTORY_PATH@dborbvoip/bvoipwci/bvoipwci.work_BVOIPGIOMCustomerInventory" value="dborbvoip/bvoipwci/BVOIPGIOMCustomerInventory"/>
+  <Metadata name="beaType" value="urn:com-bea-ide:project.type:WebApp"/>
+  <Metadata name="applicationDescriptor" value="dborbvoip/bvoipwci/BVOIPGIOMCustomerInventory/WEB-INF/web.xml"/>
+  <Metadata name="applicationRootPath" value="dborbvoip/bvoipwci/BVOIPGIOMCustomerInventory"/>
+  <Languages>
+   <Language languageId="1" languageName="JavaLanguage" sourceFilesPattern="*.java;*.sqlj" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.jar" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="2" resourceTypeName="XMLLanguage" resourceFilesPattern="*.xml" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+     <ResourceType resourceTypeId="3" resourceTypeName="JavaPropertiesLanguage" resourceFilesPattern="*.properties" resourceFilesCollation="WindowsNTFS" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="2" languageName="JavaWebServerLanguage" sourceFilesPattern="*.jsp" sourceFilesCollation="WindowsNTFS">
+    <ResourceTypes>
+     <ResourceType resourceTypeId="1" resourceTypeName="JavaWebContainerLanguage" resourceFilesCollation="WindowsNTFS" resourceContainersPattern="*.ear;*.war" resourceContainersCollation="WindowsNTFS">
+     </ResourceType>
+    </ResourceTypes>
+   </Language>
+   <Language languageId="3" languageName="JavaWebClientLanguage" sourceFilesPattern="*.htm;*.html;*.htc;*.js;*.vbs" sourceFilesCollation="WindowsNTFS">
+   </Language>
+  </Languages>
+  <Sources>
+   <SourceDirectory sourceDirectoryRef="dborbvoip/bvoipwci/BVOIPGIOMCustomerInventory" languageId="2" sourceDirectorySize="0">
+   </SourceDirectory>
+   <SourceDirectory sourceDirectoryRef="dborbvoip/bvoipwci/BVOIPGIOMCustomerInventory" languageId="3" sourceDirectorySize="0">
+   </SourceDirectory>
+  </Sources>
+  <Resources>
+   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@dborbvoip/bvoipwci/bvoipwci.work_BVOIPGIOMCustomerInventory%/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   </DirectoryReference>
+  </Resources>
+ </Project>
+</Projects>

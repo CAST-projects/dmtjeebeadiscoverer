@@ -67,4 +67,16 @@ public class JeeBeaProjectsDiscovererUnitTest
     {
         new JeeBeaProjectsDiscovererTester("Test1").go();
     }
+
+    /**
+     * Test discovery of 1 Project
+     *
+     * @throws Throwable
+     *             if anything goes wrong
+     */
+    @Test
+    public void unitTest2() throws Throwable
+    {
+        new JeeBeaProjectsDiscovererTester("Test2").go();
+    }
 }
