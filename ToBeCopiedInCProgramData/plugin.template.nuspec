@@ -11,12 +11,11 @@
     <projectUrl>https://github.com/CAST-projects/dmtjeebeadiscoverer</projectUrl>
     <description>This extension contains a DMT discoverer plugin to enable the creation of projects based on the content of *.work files.</description>
     <releaseNotes>https://github.com/CAST-projects/dmtjeebeadiscoverer/wiki</releaseNotes>
-    <tags>CASTUserCommunity DMT Discoverer BEA CAIP80</tags>
+    <tags>CASTUserCommunity DMT DISCOVER JEE BEA CAIP80</tags>
     <dependencies>
       <dependency id="CAIP" version="8.0.0"/>
     </dependencies>
-		<tags>DMT DISCOVER JEE BEA CAIP8.0</tags>		
- </metadata>
+  </metadata>
   <files>
     <file src="TOOLS\**" target="TOOLS" />    
     <file src="JEE-BeaProjectDiscoverer Technology Extension Version.txt" target="JEE-BeaProjectDiscoverer Technology Extension Version.txt" />    
