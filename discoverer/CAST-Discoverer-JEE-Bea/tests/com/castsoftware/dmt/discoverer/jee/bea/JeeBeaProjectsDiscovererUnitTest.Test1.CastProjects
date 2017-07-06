@@ -30,7 +30,7 @@
    </SourceDirectory>
   </Sources>
   <Resources>
-   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxDTL%/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   <DirectoryReference directoryRef="./APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
    </DirectoryReference>
    <ProjectReference projectRef="nxweb.work_Utilities" languageId="0" resourceTypeId="0">
    </ProjectReference>
@@ -73,7 +73,7 @@
    </SourceDirectory>
   </Sources>
   <Resources>
-   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWeb%/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   <DirectoryReference directoryRef="./APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
    </DirectoryReference>
    <ProjectReference projectRef="nxweb.work_NetworxDTL" languageId="0" resourceTypeId="0">
    </ProjectReference>
@@ -114,7 +114,7 @@
    </SourceDirectory>
   </Sources>
   <Resources>
-   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_Utilities%/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   <DirectoryReference directoryRef="./APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
    </DirectoryReference>
    <ProjectReference projectRef="nxweb.work_NetworxDTL" languageId="0" resourceTypeId="0">
    </ProjectReference>
@@ -157,7 +157,7 @@
    </ContainerReference>
    <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWebClient%/NetworxWebClient/util" languageId="1" resourceTypeId="1" directorySize="0">
    </DirectoryReference>
-   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWebClient%/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   <DirectoryReference directoryRef="./APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
    </DirectoryReference>
    <ProjectReference projectRef="nxweb.work_NetworxDTL" languageId="0" resourceTypeId="0">
    </ProjectReference>
@@ -198,7 +198,7 @@
   <Resources>
    <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWebServer%/NetworxWeb/WEB-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
    </DirectoryReference>
-   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@nxweb.work_NetworxWebServer%/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   <DirectoryReference directoryRef="./APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
    </DirectoryReference>
    <ProjectReference projectRef="nxweb.work_NetworxDTL" languageId="0" resourceTypeId="0">
    </ProjectReference>

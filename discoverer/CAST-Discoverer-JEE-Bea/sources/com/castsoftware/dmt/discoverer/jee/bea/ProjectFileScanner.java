@@ -177,7 +177,7 @@ public class ProjectFileScanner
             if ("urn:com-bea-ide:project.type:Java".equals(projectType))
             {
                 javaProjects.add(currentProject.getId());
-                
+
                 //String projectFolder = projectPath;
                 //if (projectFolder.startsWith("./"))
                 //	projectFolder = buildPackageRelativePath(currentProject, projectFolder.substring(2));
@@ -293,7 +293,11 @@ public class ProjectFileScanner
             }
             classpaths.clear();
             // add implicit classpath
-            String libpath = buildPackageRelativePath(currentProject, "APP-INF/lib");
+            // TODO: extract the option "output.directory" from the node "EARBuild"
+            // <component name="com.bea.ide.workspace.IWorkspace">
+            // <node name="EARBuild">
+            // <option name="output.directory" value="." />
+            String libpath = project.getPath().concat("/APP-INF/lib");
             currentProject.addDirectoryReference(libpath, javaLanguageId, javaContainerLanguageId);
 		}
 

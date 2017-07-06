@@ -34,7 +34,7 @@
    </SourceDirectory>
   </Sources>
   <Resources>
-   <DirectoryReference directoryRef="%#!$?BASE_DIRECTORY_PATH@dborbvoip/bvoipwci/bvoipwci.work_BVOIPGIOMCustomerInventory%/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
+   <DirectoryReference directoryRef="dborbvoip/bvoipwci/APP-INF/lib" languageId="1" resourceTypeId="1" directorySize="0">
    </DirectoryReference>
   </Resources>
  </Project>
