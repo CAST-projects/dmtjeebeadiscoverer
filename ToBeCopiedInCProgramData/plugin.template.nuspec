@@ -1,19 +1,21 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
-    <id>com.castsoftware.dmtjeebeadiscoverer</id>
+    <id>com.castsoftware.uc.dmtjeebeadiscoverer</id>
     <version>_VERSION_-build_BUILDNO_</version>
     <title>JEE bea IDE Discoverer</title>
-    <authors>CAST Product</authors>
+    <authors>User Community</authors>
     <owners>CAST</owners>
-    <licenseUrl>https://help.castsoftware.com/hc/en-us/articles/212612648-AIP-Extension-License</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectUrl>http://doc.castsoftware.com/display/DOCEXT/CPP+Compilation+Database+Discoverer+1.0</projectUrl>
-    <description>Support for discovering JEE bea IDE projects. It should be used when *.work files are delivered.</description>
+    <licenseUrl>https://extend-beta.castsoftware.com/V2/Licenses/Cast-Licence-UserCommunity-1.0.html</licenseUrl>
+    <projectUrl>https://github.com/CAST-projects/dmtjeebeadiscoverer</projectUrl>
+    <description>This extension contains a DMT discoverer plugin to enable the creation of projects based on the content of *.work files.</description>
+    <releaseNotes>https://github.com/CAST-projects/dmtjeebeadiscoverer/wiki</releaseNotes>
+    <tags>CASTUserCommunity DMT Discoverer BEA CAIP80</tags>
     <dependencies>
-      <dependency id="CAIP" version="8.1.0"/>
+      <dependency id="CAIP" version="8.0.0"/>
     </dependencies>
-		<tags>DMT DISCOVER JEE BEA CAIP8.1</tags>		
+		<tags>DMT DISCOVER JEE BEA CAIP8.0</tags>		
  </metadata>
   <files>
     <file src="TOOLS\**" target="TOOLS" />    
