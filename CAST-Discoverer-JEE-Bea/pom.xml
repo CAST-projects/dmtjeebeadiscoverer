@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project 
+  xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.castsoftware</groupId>
+  <artifactId>dmtjeebeadiscoverer</artifactId>
+  <version>1.0.0</version>
+  <properties>
+    <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+    <aipVersion>8.3.3-SNAPSHOT</aipVersion>
+    <versionTechnoUA>3.0.0</versionTechnoUA>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.castsoftware</groupId>
+      <artifactId>CAST-Junit</artifactId>
+      <version>${aipVersion}</version>
+      <classifier>tests</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.castsoftware</groupId>
+      <artifactId>CAST-Utilities</artifactId>
+      <version>${aipVersion}</version>
+      <classifier>tests</classifier>
+    </dependency>
+    <dependency>
+        <groupId>com.castsoftware</groupId>
+        <artifactId>dmtcoetechnoua</artifactId>
+        <version>${versionTechnoUA}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/junit/junit -->
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>com.castsoftware</groupId>
+        <artifactId>CAST-Techno-JEE</artifactId>
+        <version>${aipVersion}</version>
+    </dependency>
+    <dependency>
+        <groupId>com.castsoftware</groupId>
+        <artifactId>CAST-DeliveryEngine</artifactId>
+        <version>${aipVersion}</version>
+        <classifier>tests</classifier>
+    </dependency>
+  </dependencies>
+
+  <build>
+  <pluginManagement>
+    <plugins> 
+      <!-- unit test configuration -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.18.1</version>
+        <configuration>
+          <useSystemClassLoader>false</useSystemClassLoader>
+        </configuration>
+      </plugin>
+    </plugins>
+    </pluginManagement>
+  </build>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>nbuilds</id>
+      <url>http://jnk-maven:8081/artifactory/cast-internal</url>
+    </snapshotRepository>
+  </distributionManagement>
+  <repositories>
+    <repository>
+      <id>thirdPartyJars</id>
+      <name>jnk-maven.castcorp.com-releases</name>
+      <url>http://jnk-maven:8081/artifactory/ext-release-local</url>
+    </repository>
+    <repository>    
+      <id>nbuild-releases</id>
+      <url>http://jnk-maven:8081/artifactory/cast-internal</url>
+    </repository>
+  </repositories>
+</project>
